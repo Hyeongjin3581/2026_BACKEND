@@ -8,7 +8,7 @@
 
 */
 
-package day01;  // 패키지 (폴더명) 이면서 클래스의 위치 식별용도
+package Day01;  // 패키지 (폴더명) 이면서 클래스의 위치 식별용도
 
 public class Exam {
         // public : 공개용 다른 패키지에서 사용 가능한 클래스 뜻
