@@ -154,7 +154,7 @@ public class Practice3 {
     // System.out.print("태어난 년도: ");
     // int 태어난년도 = scan.nextInt();
     // int 나이 = 2025-태어난년도;
-    // System.out.println("2025년 기준 나이: " + 나이);
+    // System.out.println("2025년 기준 나이: " + 나이 +"세");
 
 /*[문제 13] Scanner를 이용해 키(cm)와 몸무게(kg)를 각각 double로 입력받아, BMI 지수를 계산하여 출력하시오.
 요구 조건:
@@ -181,12 +181,12 @@ BMI 지수: 22.34... */
 출력 예시:
 결과: 관리자 */
 
-    // System.out.print("아이디: ");
-    // String 아이디 = scan.next();
-    // System.out.print("이메일: ");
-    // String 이메일 = scan.next();
-    // if(아이디.equals("admin") || 이메일.equals("admin@test.com")){System.out.println("관리자");}
-    // else{System.out.println("일반 사용자");};
+    System.out.print("아이디: ");
+    String 아이디 = scan.next();
+    System.out.print("이메일: ");
+    String 이메일 = scan.next();
+    boolean result4 =아이디.equals("admin") || 이메일.equals("admin@test.com");
+    System.out.println(result4 ? "관리자" : "일반 사용자");
 
 /*[문제 15] Scanner를 이용해 100점 만점의 점수(int)를 입력받아, 점수에 따라 아래와 같이 등급을 부여하고 출력하시오.
 90점 이상: 'A'
@@ -207,6 +207,11 @@ BMI 지수: 22.34... */
     //     System.out.println("등급: C");
     // }
 
+
+        System.out.println("점수를 입력하세요:");
+        int score3 = scan.nextInt();
+        System.out.printf("등급: %c\n", score3>=90 && score3 <= 100 ? 'A' : score3 >= 80 && score3 < 90 ? 'B' : 'C');
+
 /*[문제 16] Scanner를 이용해 나이(int)를 입력받아, 20대(20세 이상 29세 이하)에 해당하는 경우 "이벤트 대상입니다."를, 
 그렇지 않으면 "이벤트 대상이 아닙니다."를 출력하시오.
 입력 예시:
@@ -214,10 +219,8 @@ BMI 지수: 22.34... */
 출력 예시:
 이벤트 대상입니다. */
 
-    System.out.print("나이를 입력하세요: ");
-    int 나이 = scan.nextInt();
-    if(나이 > 20 && 나이 <=29){System.out.println("이벤트 대상입니다.");}
-    else{System.out.println("이벤트 대상이 아닙니다.");}
+   System.out.println("나이를 입력하세요:"); int age = scan.nextInt();
+   System.out.println(age >= 20 && age <= 29 ? "이벤트 대상입니다." : "이벤트 대상이 아닙니다.");
 
     }
 }

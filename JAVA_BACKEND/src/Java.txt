@@ -37,3 +37,10 @@
         Scanner scan = new Scanner(System.in);
     2. 입력객체 통한 입력함수( nextXXX() , 타입 주의 , 엔터기준으로 구분 )
         타입 변수명 = scan.nextXXX;
+        * .nextLine() : 개행(/n) 사용하기 때문에 앞에 다른 .nextXXX() 존재 했을때 앞전 개행 포함
+        예 .nextInt() ~ .nextline() : nextInt() 에서 3 입력 후 엔터(개행/n)  남는다. 
+        해결방안 : .nextLine() 사이에 하나 추가한다. 
+        .next() 문자열 [vs] .netxLine() 문자열 (띄워쓰기o)
+
+[ ]
+    * 다형성 : (하나의 자료/값) 다양한 형태(타입)
