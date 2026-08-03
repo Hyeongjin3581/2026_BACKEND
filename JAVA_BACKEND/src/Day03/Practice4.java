@@ -77,12 +77,14 @@ Scanner scan = new Scanner(System.in);
 주민등록번호(-포함) 13자리를 입력하세요: 950101-2******
 출력 예시: 여자 */
 
-
-
-
-
-
-
+//5.
+    // System.out.println("주민등록번호(-포함) 13자리를 입력하세요: ");
+    // String 민증 = scan.next();
+    // if(민증.charAt(7) == '1'  ||  민증.charAt(7) == '3'){
+    //     System.out.println("남자");
+    // }else{
+    //     System.out.println("여자");
+    // }
 
 /*[문제 6] Scanner를 이용해 게임 점수를 정수로 입력받아, 아래 기준에 따라 지급될 상품을 출력하는 프로그램을 작성하시오.
 900점 이상: 'A급 경품'
@@ -93,6 +95,22 @@ Scanner scan = new Scanner(System.in);
 점수를 입력하세요: 750
 출력 예시: B급 경품 */
 
+//6.
+
+    // System.out.print("점수를 입력하세요: ");
+    // int point = scan.nextInt();
+    // if(point >=900){
+    //     System.out.println("A급 경품 ");
+    // }else if(point >=700){
+    //     System.out.println("B급 경품 ");
+    // }else if(point >=500){
+    //     System.out.println("C급 경품 ");
+    // }else{
+    //     System.out.println("참가상");
+    // }
+
+
+
 /*[문제 7] Scanner를 이용해 사용자 역할(role)을 문자열로 입력받습니다. 역할에 따라 다른 접근 권한 메시지를 출력하는 프로그램을 작성하시오.
 admin: '모든 기능에 접근할 수 있습니다.'
 editor: '콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.'
@@ -101,6 +119,21 @@ viewer: '콘텐츠 조회만 가능합니다.'
 입력 예시:
 역할을 입력하세요: editor
 출력 예시: 콘텐츠 수정 및 생성 기능에 접근할 수 있습니다. */
+
+
+//7.                                        // 문자열 비교는 equals()
+
+    // System.out.print("역할을 입력하세요: ");
+    // String role = scan.next();
+    // if(role.equals("admin")){
+    //     System.out.println("모든 기능에 접근할 수 있습니다.");
+    // }else if(role.equals("editor")){
+    //     System.out.println("콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.");
+    // }else if(role.equals("viewer")){
+    //     System.out.println("콘텐츠 조회만 가능합니다.");
+    // }else{
+    //     System.out.println("정의되지 않은 역할입니다.");
+    // }
 
 /*[문제 8] Scanner를 이용해 사용자의 나이를 정수로 입력받아, 아래 기준에 따라 입장료를 출력하는 프로그램을 작성하시오.
 8세 미만: '무료'
@@ -111,6 +144,21 @@ viewer: '콘텐츠 조회만 가능합니다.'
 나이를 입력하세요: 22
 출력 예시: 10,000원 */
 
+// 8. 
+
+    // System.out.print("나이를 입력하세요: ");
+    // int age = scan.nextInt();
+
+    // if(age < 8){
+    //     System.out.println("무료");
+    // }else if(8<= age  && age <=19){
+    //     System.out.println("5,000원");
+    // }else if(20 <= age && age <=65){
+    //     System.out.println("10,000원");
+    // }else{
+    //     System.out.println("3000원");
+    // }
+
 /*[문제 9] Scanner를 이용해 하나의 점수를 입력받아 다음 조건에 따라 등급을 출력하는 프로그램을 작성하시오.
 90점 이상: 'A등급'
 80점 이상 90점 미만: 'B등급'
@@ -120,6 +168,21 @@ viewer: '콘텐츠 조회만 가능합니다.'
 점수를 입력하세요: 85
 출력 예시: B등급 */
 
+//9.
+
+    // System.out.print("점수를 입력하세요: ");
+    // int point = scan.nextInt();
+
+    // if(point >= 90){
+    //     System.out.println("A등급");
+    // }else if(point >= 80){
+    //     System.out.println("B등급");
+    // }else if(point >= 70){
+    //     System.out.println("C등급");
+    // }else{
+    //     System.out.println("재시험");
+    // }
+
 /*[문제 10] Scanner를 이용해 총 구매 금액을 입력받습니다. 구매 금액에 따라 할인율을 적용하여 최종 결제 금액을 출력하는 프로그램을 작성하시오.
 50,000원 이상: 10% 할인
 30,000원 이상 50,000원 미만: 5% 할인
@@ -127,6 +190,23 @@ viewer: '콘텐츠 조회만 가능합니다.'
 10,000원 미만: 할인 없음
 입력 예시: 총 구매 금액: 60000
 출력 예시: 최종 결제 금액: 54000원 */
+
+//10.
+    // System.out.print("총 구매 금액 : ");
+    // double money = scan.nextFloat();
+
+    // if(money >= 50000){
+    //     double 결제금액 = money * 0.9;
+    //     System.out.println("최종 결제 금액: "+결제금액);
+    // }else if(money >=30000){
+    //     double 결제금액 = money *0.95;
+    //     System.out.println("최종 결제 금액: "+결제금액);
+    // }else if(money >= 10000){
+    //     double 결제금액 = money*0.99;
+    //     System.out.println("최종 결제 금액: "+결제금액);
+    // }else{
+    //     System.out.println("최종 결제 금액: "+money);
+    // }
 
 /*[문제 11] 1부터 12 사이의 월(Month)을 숫자로 입력받아, 해당하는 계절을 출력하는 프로그램을 작성하시오. 만약 1~12 이외의 숫자를 입력하면 '잘못된 월입니다.'를 출력하세요.
 봄: 3, 4, 5월
@@ -136,6 +216,13 @@ viewer: '콘텐츠 조회만 가능합니다.'
 입력 예시:
 월(1~12)을 입력하세요: 9
 출력 예시: 가을 */
+
+// 11.
+
+    System.out.println("월(1~12)을 입력하세요: ");
+    
+
+
 
 /*[문제 12] Scanner를 이용해 서로 다른 세 개의 정수를 입력받아, 가장 큰 수를 출력하는 프로그램을 작성하시오.
 입력 예시:
@@ -167,33 +254,33 @@ viewer: '콘텐츠 조회만 가능합니다.'
 
 
 //14.
-        System.out.print("첫 번째 정수: ");
-        int num1= scan.nextInt();
-        System.out.print("두 번째 정수: ");
-        int num2= scan.nextInt();
-        System.out.print("세 번째 정수: ");
-        int num3= scan.nextInt();
+        // System.out.print("첫 번째 정수: ");
+        // int num1= scan.nextInt();
+        // System.out.print("두 번째 정수: ");
+        // int num2= scan.nextInt();
+        // System.out.print("세 번째 정수: ");
+        // int num3= scan.nextInt();
 
-        int temp;
-        if (num1 > num2) {
-            temp = num1;
-            num1 = num2;
-            num2 = temp;
-        }
+        // int temp;
+        // if (num1 > num2) {
+        //     temp = num1;
+        //     num1 = num2;
+        //     num2 = temp;
+        // }
 
-        if (num1 > num3) {
-            temp = num1;
-            num1 = num3;
-            num3 = temp;
-        }
+        // if (num1 > num3) {
+        //     temp = num1;
+        //     num1 = num3;
+        //     num3 = temp;
+        // }
 
-        if (num2 > num3) {
-            temp = num2;
-            num2 = num3;
-            num3 = temp;
-        }
+        // if (num2 > num3) {
+        //     temp = num2;
+        //     num2 = num3;
+        //     num3 = temp;
+        // }
 
-        System.out.printf("%d, %d, %d\n", num1, num2, num3);
+        // System.out.printf("%d, %d, %d\n", num1, num2, num3);
     
 
 /*[문제 15] 가위바위보 게임
