@@ -219,10 +219,20 @@ viewer: '콘텐츠 조회만 가능합니다.'
 
 // 11.
 
-    System.out.println("월(1~12)을 입력하세요: ");
+    // System.out.print("월(1~12)을 입력하세요: ");
+    // int month = scan.nextInt();
+    // if(3 <= month && month <= 5){
+    //     System.out.println("봄");
+    // }else if(6 <= month && month <=8 ){
+    //     System.out.println("여름");
+    // }else if(9 <= month && month <= 11 ){
+    //     System.out.println("가을");
+    // }else if(month == 12 || 1 <= month || month <=2 ){
+    //     System.out.println("겨울");
+    // }else{
+    //     System.out.println("잘못된 월입니다.");
+    // }
     
-
-
 
 /*[문제 12] Scanner를 이용해 서로 다른 세 개의 정수를 입력받아, 가장 큰 수를 출력하는 프로그램을 작성하시오.
 입력 예시:
@@ -231,6 +241,26 @@ viewer: '콘텐츠 조회만 가능합니다.'
 세 번째 정수: 78
 출력 예시: 가장 큰 수: 78 */
 
+    // System.out.print("첫 번째 정수> ");
+    // int n1 = scan.nextInt();
+    // System.out.print("두 번째 정수> ");
+    // int n2 = scan.nextInt();
+    // System.out.print("세 번째 정수> ");
+    // int n3 = scan.nextInt();
+
+    // int max =0;
+
+    // if (n1 >= n2 && n1 >= n3) {
+    // max = n1;
+    // } else if (n2 >= n1 && n2 >= n3) {
+    // max = n2;
+    // } else {
+    // max = n3;
+    // }
+    // System.out.println("가장 큰 수:" +max);
+
+
+    
 /*[문제 13] Scanner를 이용해 연도(year)를 입력받아 해당 연도가 윤년인지 평년인지 판별하는 프로그램을 작성하시오.
 윤년 조건:
 연도가 4의 배수이면서, 100의 배수는 아닐 때
