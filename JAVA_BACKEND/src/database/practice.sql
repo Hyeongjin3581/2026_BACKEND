@@ -19,18 +19,17 @@
 'company_db' 데이터베이스를 사용하도록 활성화하시오.
 현재 서버의 모든 데이터베이스 목록을 다시 확인하여 'company_db'가 잘 생성되었는지 확인하시오.*/
 
+-- [1]
 CREATE DATABASE my_db;
-
+-- [2]
 show DATABASES;
-
+-- [3]
 USE  my_db;
-
+-- [4]
 DROP DATABASE IF EXISTS my_db;
 
+--[5]
 DROP DATABASE IF EXISTS company_db;
-
 CREATE DATABASE company_db;
-
 USE company_db;
-
 SHOW DATABASES;
