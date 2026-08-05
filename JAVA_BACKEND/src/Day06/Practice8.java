@@ -145,3 +145,4 @@ class Member{
         this.isLogin = false;
     }
 }
+
