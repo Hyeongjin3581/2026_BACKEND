@@ -18,9 +18,9 @@
 -- 4. 데이터베이스 테이블을 생성한다.
 
 # 1번문제
-drop DATABASE IF EXISTS q1;
-CREATE DATABASE q1;
-USE q1;
+drop DATABASE IF EXISTS q0805;
+CREATE DATABASE q0805;
+USE q0805;
 CREATE TABLE members(
     member_id int AUTO_INCREMENT,
     constraint PRIMARY KEY(member_id),
@@ -40,9 +40,18 @@ CREATE TABLE members(
 -- stock (재고수량): 정수, Default 0, NULL 허용 안함
 -- created_at (등록일): 날짜/시간, Default 현재 날짜/시간
 
+DROP DATABASE IF EXISTS p0806;
+CREATE DATABASE p0806;
+USE p0806;
 
-
-
+CREATE Table products(
+    product_id INT AUTO_INCREMENT,
+    constraint PRIMARY KEY(product_id),
+    product_name VARCHAR(100) NOT NULL,
+    price INT UNSIGNED NOT NULL,
+    stock INT DEFAULT 0 NOT NULL,
+    created_at DATETIME DEFAULT now()
+)
 
 -- [문제 3]
 -- 아래 조건에 맞는 orders 테이블을 생성하는 SQL을 작성하세요.
@@ -53,6 +62,17 @@ CREATE TABLE members(
 -- order_date (주문일): 날짜/시간, Default 현재 날짜/시간
 -- total_price (총금액): int unsigned, NULL 허용 안함
 
+DROP DATABASE IF EXISTS o0806;
+CREATE DATABASE o0806;
+USE o0806;
+CREATE Table orders(
+    order_id BIGINT AUTO_INCREMENT,
+    constraint PRIMARY KEY(order_id),
+    member_id int ,
+    constraint FOREIGN KEY(members),
+    order_date DATETIME DEFAULT now(),
+    total_price INT UNSIGNED NOT NULL
+)
 
 
 -- [문제 4]
@@ -67,6 +87,8 @@ CREATE TABLE members(
 
 
 
+
+
 -- [문제 5]
 -- 아래 조건에 맞는 students 테이블을 생성하는 SQL을 작성하세요.
 -- 테이블명: students
@@ -76,6 +98,8 @@ CREATE TABLE members(
 -- major (전공): 문자열(50)
 -- grade (학년): tinyint unsigned
 -- enrolled_date (입학일): date
+
+
 
 
 

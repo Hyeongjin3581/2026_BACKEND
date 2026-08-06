@@ -30,14 +30,7 @@ class Printer{
     }
 }
 
-/*[문제 2] Greeter 클래스를 만드세요.
-1. 문자열(이름) 하나를 매개변수로 받아, "안녕하세요, [이름]님!"이라고 출력하는 greet 메소드를 정의하세요.
-(매개변수 O, 반환값 X)
-2. main 함수에서 Greeter 객체를 생성하고, 자신의 이름을 인자로 전달하여 greet 메소드를 호출하세요.*/
-
-
 // [2]
-
 class Greeter{
     //메소드
     void greet(String name){
@@ -50,6 +43,10 @@ class Greeter{
 1. 정수 두 개를 매개변수로 받아, 두 수의 합을 반환하는 add 메소드를 정의하세요. (매개변수 O, 반환값 O)
 2. main 함수에서 SimpleCalculator 객체를 생성하고, add 메소드를 호출하여 반환된 결과를 변수에 저장한 뒤,
 그 변수를 출력하세요.*/
+
+class simpleCalculator{
+    
+}
 
 
 /*[문제 4] Checker 클래스를 만드세요.
