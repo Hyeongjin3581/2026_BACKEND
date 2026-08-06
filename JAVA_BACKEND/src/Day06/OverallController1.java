@@ -1,70 +1,109 @@
 package Day06;
 
-import java.util.Scanner;;
-
-public class OverallController1{
+import java.util.Scanner;
+public class OverallController1 {
     public static void main(String[] args) {
-
+        memberRepository repository = new memberRepository();
         Scanner scan = new Scanner(System.in);
-        Post[] posts = new Post[100];
-        
-        // for 무한반복문
-        for(;;){
-            System.out.println("==== My Community ====");
-            System.out.println("1. 게시물쓰기 2. 게시물선택");
-            System.out.println("===================");
-            System.out.print("선택> ");
+        for (;;) {
+            System.out.println("============ My Community ============ ");
+            System.out.println("1.회원 설정 2.회원 정보 출력");
+            System.out.println("====================================== ");
+            System.out.print("선택>");
             int ch = scan.nextInt();
 
-            // if ch == 1일 때,
-            if(ch==1){
+
+            //class memberTable{
+    int memberID;
+    String userID;
+    String userPW;
+    String userName;
+    String userPhoto;
+}
+            if (ch == 1) {
                 scan.nextLine();
-                System.out.print("내용 : ");
-                String content = scan.nextLine();
-                System.out.print("작성자 : ");
-                String writer = scan.nextLine();
+                System.out.print("회원고유ID : ");     int memberID = scan.nextInt();
+                System.out.print("유저ID : ");   String userID = scan.nextLine();
 
-                // post 인스턴스 생성 및 result 초기화
-                Post post = new Post(content,writer);
-                boolean result = false;
 
-                for(int i=0; i<=posts.length-1;i++){
-                    if(posts[i] == null){
-                        posts[i] = post;
-                        result = true;
-                        break;
-                    }
-                }
+                memberTable post = new memberTable(content, writer);
+                boolean result = repository.save(post);
 
-                if(result){
-                    System.out.println("[안내] 게시물 작성 성공");
-                }else{
-                    System.out.println("[안내] 게시물 작성 실패");
-                }
+                if (result) { System.out.println("[안내] 글쓰기 성공");} 
+                else { System.out.println("[안내] 글쓰기 실패"); }
 
-            }else if(ch==2){
-                //향상된 for문 
-                for(Post post : posts){
-                    if(post != null){
-                        System.out.printf("내용 : %s , 작성자 : %s\n",post.content, post.writer);
+            } else if (ch == 2) {
+                Post[] posts = repository.findAll();
+                for (Post post : posts) {
+                    if (post != null) {
+                        System.out.printf("작성자 : %s , 내용 : %s \n", post.writer, post.content);
                     }
                 }
             }
-            else{
-                break;
+        }
+    }
+}
+
+//리뷰 레포지토리 데이터 저장 및 반환(조회) 비즈니스 로직 전담 클래스
+class reviewRepository {
+
+    ReviewTable[] review = new ReviewTable[100];
+
+    // 리뷰테이블에 저장
+    boolean save(ReviewTable revTable) {
+        for (int index = 0; index < review.length; index++) {
+            if (review[index] == null) {
+                review[index] = revTable;
+                return true;
             }
-        }// for end
+        }
+        return false;
+    }
+    // 리뷰테이블 전체 목록 반환
+    ReviewTable[] findAll() {
+        return review;
     }
 }
 
-class Post{
-    String content;
-    String writer;
 
-    Post(){}
+// 리뷰테이블 class 생성
+class ReviewTable{
+    String review;
+    int score;
+    String listDay;
 
-    Post(String content, String writer){
-        this.content = content;
-        this.writer = writer;
+    //기본 생성자 생성
+    ReviewTable(){}
+
+    ReviewTable(String review, int score, String listDay){
+        this.review = review;
+        this.score = score;
+        this.listDay = listDay;
     }
 }
+
+
+
+class memberTable{
+    int memberID;
+    String userID;
+    String userPW;
+    String userName;
+    String userPhoto;
+
+    //기본생성자
+    memberTable(){}
+
+    memberTable(int memberID, String userID, String userPW, String userName,String userPhoto){
+        this.memberID = memberID;
+        this.userID = userID;
+        this.userPW = userPW;
+        this.userName = userName;
+        this.userPhoto = userPhoto;
+    }
+}
+
+
+
+//  등록 2개 , 출력 2개 
+// class 2개만 만들고,  controller 1개 ( main )  ,repository( 배열 / 등록 / 출력 4개 메소드 )
