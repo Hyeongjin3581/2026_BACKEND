@@ -1,5 +1,6 @@
-package Day08.pakage1;
+package Day08;
 
+import Day08.pakage1.A;
 
 public class Exam1 {
     public static void main(String[] args) {
@@ -12,15 +13,10 @@ public class Exam1 {
 
         a.공개메소드();
         // a.비공개메소드();
-        a.일반메소드();
+        // a.일반메소드();
 
         // [ 3 ] 비공개된 생성자로 객체 생성 안된다.
         // B b = new  B();
-
-
-
-
-
 
         /*
             접근제한자 : 클래스 , 멤버변수 , 메소드 , 생성자 등 호출 (폴더/클래스) 접근제한 만들기
