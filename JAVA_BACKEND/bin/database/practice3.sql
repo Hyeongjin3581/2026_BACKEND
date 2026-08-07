@@ -102,7 +102,7 @@ update books set stock = 0 WHERE stock = NULL;
 -- [문제 7]orders 테이블에서 고객명(customer)이 '이서연' 인 주문 데이터를 모두 삭제하세요.
 DELETE FROM orders WHERE customer ='이서연';
 -- [문제 8]books 테이블에서 재고(stock)가 0 이하(<= 0) 인 도서를 삭제하세요.
-DELETE FROM books WHERE Stock <= 0;
+DELETE FROM books WHERE stock <= 0;
 
 -- [문제 9]orders 테이블에서 주문수량(order_qty)이 3 이상(>=) 인 주문 데이터를 삭제하세요.
 DELETE FROM orders WHERE order_qty >= 3;
