@@ -57,18 +57,15 @@ public class practice11 {
 
         ArrayList<Book> library = new ArrayList<>(); 
 
-        Book b1 = new Book();
-        Book b2 = new Book();
-        Book b3 = new Book();
+        Book b1 = new Book("광전사의 군화","요네");
+        Book b2 = new Book("가시갑옷","말파이트");
+        Book b3 = new Book("루덴의 메아리","신드라");
 
         library.add(b1); library.add(b2); library.add(b3);
 
-        b1.title = "광전사의 군화"; b1.author = "요네";
-        b2.title = "가시갑옷";         b2.author ="말파이트";
-        b3.title = "루덴의 메아리"; b3.author = "신드라";
 
         for(Book book: library){
-            System.out.println("제목: " + book.title + ", 저자: " + book.author);
+            System.out.println("제목: " + book.getTitle() + ", 저자: " + book.getAuthor());
         }
 
 /*[문제 7] Scanner를 사용하여 사용자로부터 문자열을 계속해서 입력받습니다.
