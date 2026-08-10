@@ -30,6 +30,7 @@ public class Exam3 {
         변수2.멤버변수 = 30;    // 총 메모리 2개
         // [3] 상수: 클래스명.상수명
         System.out.println( D.상수 );
+        System.out.println(D.정적변수);
     }   
 }
 
