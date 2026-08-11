@@ -17,7 +17,7 @@ public class BoardDao {
         for(int i = 0; i < boardList.size(); i++){
             if(boardList.get(i).getBookNum() == boardDto.getBookNum()){
                 System.out.println("[경고] 중복된 도서번호입니다.");
-                return false; // 중복 발견시 즉시 실패 반환후 종료
+                return false; 
             }
         }
         boardList.add(boardDto); 
