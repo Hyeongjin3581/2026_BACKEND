@@ -42,6 +42,25 @@ public class practice12 {
         for(int i=0;i<=beverage.length-1;i++){
             beverage[i].drink();        
         }
+        //[8]
+        // 3. main 함수에서 Sword 객체와 Gun 객체를 생성한 뒤, 이 객체들을 Character의 use() 메소드에 인자로 전달하여 각기 다른 결과가 출력되는 것을 확인하세요.*/
+        Sword sword = new Sword();
+        Gun gun = new Gun();
+        Character character = new Character();
+        character.use(sword);
+        character.use(gun);
+
+        //[9] 3. SuperClass obj = new SubClass(); 로 객체를 생성한 뒤, obj.name과 obj.method()를 각각 호출했을 때의 결과를 확인하고, 왜 다른 결과가 나오는지 주석으로 설명하세요.*/
+        SuperClass obj = new SubClass();
+        System.out.println(obj.name);
+        obj.method();
+        // obj.name은 참조 대상이 SuperClass의 String name = "상위"이지만, obj.method() 는 오버라이딩되어 참조대상이 SubClass의 method()로 메소드를 반환하였기 때문. 
+
+        //[10] 4. main 함수에서 Laptop 객체를 생성한 뒤, 이 객체가 Electronic 타입과 Device 타입으로도 형 변환이 가능한지 instanceof 연산자로 확인하고 결과를 출력하세요.*/
+        Laptop laptop = new Laptop();
+        System.out.println((laptop instanceof Electronic));  // Laptop --> Electronic   (가능) 업클래스
+        System.out.println((laptop instanceof Device));      //  Laptop --> Electronic --> Device (가능) 업클래스  / 다운클래스시 형변환 해줘야 함.  
+
     }
 }   // class end
 
@@ -155,15 +174,32 @@ class Gun extends Weapon{
 }
 
 class Character{
-    public 
+    // Weapon 매개변수를 받는 use 메소드
+    void use(Weapon weapon){
+        weapon.attack();    // attack() 메소드 호출 
+    }
 }
 /*[문제 9] 필드와 메소드의 오버라이딩 차이
 1. String name = "상위"; 필드와 method() 메소드("상위 메소드" 출력)를 가진 SuperClass를 만드세요.
 2. SuperClass를 상속받고, String name = "하위"; 필드와 method() 메소드("하위 메소드" 출력)를 가진 SubClass를 만드세요.
 3. SuperClass obj = new SubClass(); 로 객체를 생성한 뒤, obj.name과 obj.method()를 각각 호출했을 때의 결과를 확인하고, 왜 다른 결과가 나오는지 주석으로 설명하세요.*/
 
+class SuperClass{
+    String name = "상위";
+    void method(){System.out.println("상위 메소드");}
+}
+class SubClass extends SuperClass{
+    String name = "하위";
+    @Override
+    void method(){System.out.println("하위 메소드");}
+}
+
 /*[문제 10] 다중 상속 관계
 1. Device 클래스를 만드세요.
 2. Device를 상속받는 Electronic 클래스를 만드세요.
 3. Electronic을 상속받는 Laptop 클래스를 만드세요.
 4. main 함수에서 Laptop 객체를 생성한 뒤, 이 객체가 Electronic 타입과 Device 타입으로도 형 변환이 가능한지 instanceof 연산자로 확인하고 결과를 출력하세요.*/
+
+class Device{}
+class Electronic extends Device{}
+class Laptop extends Electronic{}
