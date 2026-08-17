@@ -21,6 +21,11 @@ public class BoardController {
 
     public ArrayList<BoardDto> findAll() {
         // TODO 2: DAO의 findAll() 호출하여 결과 반환
-        
+        ArrayList<Object> objList = ib.findAll();
+        ArrayList<BoardDto> result = new ArrayList<>();
+
+        for(Object obj : objList){
+            result.add((BoardDto)obj);
+        }return result;
     }
 }

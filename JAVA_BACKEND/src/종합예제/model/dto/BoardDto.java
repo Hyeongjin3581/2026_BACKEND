@@ -19,7 +19,7 @@ public class BoardDto extends BaseTime {
     public String getWriter() { return writer; }
     public void setWriter(String writer) { this.writer = writer; }
 
-    @Override
+    @Override       //  
     public String toString() {
         return "BoardDto [writer=" + writer + ", content=" + content + ", cdate=" + getCdate() + "]";
     }

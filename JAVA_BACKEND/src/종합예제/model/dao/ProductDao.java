@@ -9,8 +9,13 @@ public class ProductDao implements IBaseDao {
 
     private ArrayList<Object> productList = new ArrayList<>();
 
-    // TODO 1: IBaseDao의 save() 메서드를 오버라이딩하여 productList에 저장하는 로직 작성
-
-    // TODO 2: IBaseDao의 findAll() 메서드를 오버라이딩하여 productList를 반환하는 로직 작성
-
+    @Override
+    public boolean save(Object obj){
+        productList.add(obj);
+        return true;
+    }
+    @Override
+    public ArrayList<Object> findAll(){
+    return productList;
+    }
 }
