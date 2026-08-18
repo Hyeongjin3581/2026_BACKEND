@@ -182,3 +182,16 @@ MVC패턴 : 소규모가 아닌 체계적인 규모 필요할 때 클래스 역�
         model   :   데이터관리 담당 ,   JAVA/PYTHON/NODE.JS
     7.이동객체
         DTO
+
+        // 다형성: 하나의 변수가 여러 타입들의 하나의 자료 저장    *변수는 하나의 자료 저장*
+        // 3(int)  byte a = 3 , short b = a , long = a; < 다형성:업캐스팅 >
+            // IbaseDao ib = productDao , IbaseDao ib = boardDao  , Object obj = productDto 
+        // long a = 3L , int b = (int)a , short c = (short)b < 다형성:다운캐스팅 >
+            // (ProductDto)obj
+        // 상속(오버라이딩 선택) vs 구현(오버라이딩 필수)  이용한 다형성
+
+        // 클래스명.상수명 , 인터페이스명.상수명 
+        // 1. 첫글자가 대문자이면 인터페이스/클래스 명 , 2. 첫글자 소문자이면 변수/멤버변수
+        //  MyCar                                       myCar    ,   a.myCar
+        // 3. 전체가 대문자이면 상수                 , 4. 첫글자 소문자이면 ( ) 함수
+        //  MYCAR                                       myCar( )  ,  a.myCar( )
