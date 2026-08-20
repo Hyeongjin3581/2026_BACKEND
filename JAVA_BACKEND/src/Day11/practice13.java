@@ -46,6 +46,10 @@ public class practice13 {
         Greeting greeting = new Greeting() { public void welcome(){ System.out.println("구현"); } };
         greeting.welcome();
 
+        //[8] 3.main 함수에서 Television 객체를 생성하고, turnOn(), turnOff()와 함께 디폴트 메소드인 setMute()도 호출되는 것을 확인하세요 */
+        Television t1 = new Television();
+        t1.turnOn();    t1.turnOff();  t1.setMute(false);
+
     }
 }
 /*[문제 1] 기본 인터페이스와 구현
@@ -135,9 +139,13 @@ class Television implements Device{
     @Override public void turnOff(){System.out.println("전원을 켭니다");}
 }
 
-
-
-
 /*[문제 9] 정적 메소드 (Static Method)
 1. Calculator 인터페이스를 만들고, 두 정수의 합을 반환하는 plus(int x, int y) 정적 메소드를 정의하세요.
 2. main 함수에서 Calculator 인터페이스를 구현하는 클래스나 객체를 만들지 않고, Calculator.plus(10, 20)과 같이 인터페이스 이름으로 직접 정적 메소드를 호출하여 결과를 출력하세요. */
+
+interface Calculator{
+    public static int plus(int x ,int y){
+        int sum = x + y;
+        return sum;
+    }
+}

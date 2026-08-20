@@ -50,7 +50,7 @@ public class Practice {
                 String location = scan.next();
                 boolean 검사 = false;
 
-                // 중복 위치 검사
+                // 중복 위치 검사 (유효성 검사)
                 for (int i = 0; i < strAry2.size(); i++) {
                     String[] info = strAry2.get(i).split(",");
                     if (info[0].equals(location)) {
