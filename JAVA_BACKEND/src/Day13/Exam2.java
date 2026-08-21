@@ -56,6 +56,6 @@ public class Exam2 {
         System.out.println(localDateTime2.getDayOfMonth()); // 일(숫자)
         System.out.println(localDateTime2.getHour());              // 시간
         System.out.println(localDateTime2.getMinute());          // 분
-        System.out.println(localDateTime2.getSecond());         // 초 
+        System.out.println((localDateTime2.getSecond()));         // 초 
     }   // main end
 }

@@ -50,6 +50,9 @@ public class practice13 {
         Television t1 = new Television();
         t1.turnOn();    t1.turnOff();  t1.setMute(false);
 
+        //[9] 2. main 함수에서 Calculator 인터페이스를 구현하는 클래스나 객체를 만들지 않고,
+        // Calculator.plus(10, 20)과 같이 인터페이스 이름으로 직접 정적 메소드를 호출하여 결과를 출력하세요. */
+         Calculator.plus(10, 20);
     }
 }
 /*[문제 1] 기본 인터페이스와 구현
@@ -146,6 +149,7 @@ class Television implements Device{
 interface Calculator{
     public static int plus(int x ,int y){
         int sum = x + y;
+        System.out.println(sum);
         return sum;
     }
 }
