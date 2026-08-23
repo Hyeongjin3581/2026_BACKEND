@@ -25,7 +25,7 @@ public class Practice {
             
             // 1. 위치 찾기 구현
             if (ch == 1) { 
-                System.out.print("차량 번호를 입력해주세요 : ");
+                System.out.print("차량 번호를 입력: ");
                 String carNumber = scan.next();
                 boolean isFound = false;
 
@@ -40,7 +40,7 @@ public class Practice {
                 }
 
                 if (!isFound) {
-                    System.out.println("미등록 차량입니다.");
+                    System.out.println("미등록 차량.");
                 }
             } 
             
@@ -60,7 +60,7 @@ public class Practice {
                 }
 
                 if (검사) {
-                    System.out.println("위치 번호에는 중복 주차할 수 없습니다.");
+                    System.out.println("중복 주차할 수 없습니다.");
                 } else {
                     System.out.print("차량번호 입력 : ");
                     String carNumber = scan.next();
@@ -74,14 +74,14 @@ public class Practice {
                     // carParkingList 문자열 동기화
                     carParkingList += newRecord + "\n";
                     
-                    System.out.println("차량 입차 성공!");
-                    System.out.println("[현재 주차 데이터 목록]\n" + carParkingList);
+                    System.out.println("입차 성공");
+                    System.out.println("[현재 주차 목록]\n" + carParkingList);
                 }
             }
 
             // 3. 출차 구현
             else if (ch == 3) { 
-                System.out.print("출차할 차량번호를 입력해주세요 : ");
+                System.out.print("출차할 차량번호를 입력 : ");
                 String carNumber = scan.next();
                 boolean isFound = false;
 
@@ -139,13 +139,13 @@ public class Practice {
                 }
 
                 if (!isFound) {
-                    System.out.println("출차할 차량을 찾지 못했습니다.");
+                    System.out.println("차량을 찾지 못했습니다.");
                 }
             } 
 
             // 4. 종료
             else if (ch == 4) {
-                System.out.println("프로그램을 종료합니다.");
+                System.out.println("프로그램 종료.");
                 break;
             }
         }
