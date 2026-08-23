@@ -10,7 +10,7 @@ public class Practice {
         
         String carParkingList = "3,211가6231,202608190930\n8,452하1234,202608171227\n";
         
-        // 1. 데이터 초기화: 줄바꿈(\n) 기준으로 분할하여 ArrayList에 저장
+        // 1. 데이터 초기화: ArrayList에 저장
         String[] strAry1 = carParkingList.split("\n");
         ArrayList<String> strAry2 = new ArrayList<>();
         for (int i = 0; i < strAry1.length; i++) {
@@ -71,7 +71,7 @@ public class Practice {
                     String newRecord = location + "," + carNumber + "," + dateTime;
                     strAry2.add(newRecord);
 
-                    // carParkingList 문자열 동기화
+                    //  문자열 동기화
                     carParkingList += newRecord + "\n";
                     
                     System.out.println("입차 성공");
@@ -85,7 +85,7 @@ public class Practice {
                 String carNumber = scan.next();
                 boolean isFound = false;
 
-                // ConcurrentModificationException 방지를 위해 일반 인덱스 for문 사용
+        
                 for (int i = 0; i < strAry2.size(); i++) {
                     String car = strAry2.get(i);
                     String[] info = car.split(",");
@@ -130,10 +130,7 @@ public class Practice {
                         
                         // 1) 전체 문자열에서 해당 차량 정보 제거
                         carParkingList = carParkingList.replace(info[0] + "," + info[1] + "," + info[2] + "\n", "");
-                        
-                        // 2) 리스트(strAry2)에서도 함께 제거 (동기화)
                         strAry2.remove(i);
-
                         break;
                     } 
                 }
