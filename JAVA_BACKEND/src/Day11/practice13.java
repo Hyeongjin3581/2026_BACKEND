@@ -28,11 +28,12 @@ public class practice13 {
         //[5] 2. main 함수에서 Duck 객체를 생성하고, Object 타입의 변수에 저장하세요.
         //     3. if문과 instanceof 연산자를 사용하여, 해당 객체가 Flyable 타입인지, Swimmable 타입인지 각각 확인하고, 맞다면 해당 인터페이스 타입으로 강제 형변환하여 메소드를 호출하세요.*/
         Object duck2 = new Duck();  // Object타입의 duck2 객체 생성. 
-        if(duck2 instanceof Flyable fly2){  // 강제 형변환 최신타입. (다운캐스팅 최신버전)
-            // Flyable fly2 = (Flyable) duck2;  // 다운캐스팅 구버전.
+        if(duck2 instanceof Flyable ){  // 강제 형변환 최신타입. (다운캐스팅 최신버전)
+            Flyable fly2 = (Flyable) duck2;  // 다운캐스팅 구버전.
             fly2.fly();
         }
-        if(duck2 instanceof Swimmable swim2){
+        if(duck2 instanceof Swimmable ){
+            Swimmable swim2 = (Swimmable) duck2;
             swim2.swim();
         }
 
