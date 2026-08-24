@@ -22,6 +22,7 @@ public class Exam2 {
         @Override public void run(){
             for(int i=1; i<=20; i++){
                 try{Thread.sleep(3000);}catch(Exception e){}
+                // [3] 스레드풀에 해당 구현체 배정.
                 CallTask task = new CallTask(i);
                 poolExecutor.submit(task);
 
@@ -34,6 +35,7 @@ public class Exam2 {
                 System.out.println("대기중인 스레드수 : " + 대기중인스레드수);
                 System.out.println("대기중인 요청수 : " + 대기중인요청수);
                 }// for end
+                // [4] 20개 배정 후 스레드풀 종료 예약 (모든 작업이 끝나면)
                 poolExecutor.shutdown();
             } //run
        }; // runnable
