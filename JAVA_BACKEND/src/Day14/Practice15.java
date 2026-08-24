@@ -57,6 +57,22 @@ class InventorySlot< T > {
         this.data = data;
     }
 
+    public int getSlotNumber() {
+        return slotNumber;
+    }
+
+    public void setSlotNumber(int slotNumber) {
+        this.slotNumber = slotNumber;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
     @Override 
     public String toString(){
         return "[슬롯" +slotNumber+"번] 보관 :" + data ;
