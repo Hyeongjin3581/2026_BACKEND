@@ -22,15 +22,15 @@ public class Exam2 {
             Connection conn = DriverManager.getConnection( url , user , password );
             System.out.println("데이터베이스 연동성공");
 
-            // // [3] 연동된 데이터베이스 내 DML(insert,select,update,delete) 조작 
-            // // 1. insert 하기 , insert into 테이블명( 필드명 )values(값)
-            // String sql = "insert into board( writer, content ) values( '유재석', '내용' ) "; // 자바 문자열에 SQL 작성(자동완성 안된다.)
-            // PreparedStatement ps = conn.prepareStatement( sql ); 
-            // // conn(연동된인터페이스).prepareStatement( 기재할SQL );   , 기재된 인터페이스 반환
-            // // PreparedStatement( SQL기재된 인터페이스 ) 
-            // int result = ps.executeUpdate(); // ps.executeUpdate(), ( SQL기재된 인터페이스에서 SQL 실행 ), 실행한 레코드수 반환 
-            // System.out.println( result ); // 1: 성공 , 0: 실패
-            // System.out.println( "레코드 등록 성공");
+            // [3] 연동된 데이터베이스 내 DML(insert,select,update,delete) 조작 
+            // 1. insert 하기 , insert into 테이블명( 필드명 )values(값)
+            String sql = "insert into board( writer, content ) values( '유재석', '내용' ) "; // 자바 문자열에 SQL 작성(자동완성 안된다.)
+            PreparedStatement ps = conn.prepareStatement( sql ); 
+            // conn(연동된인터페이스).prepareStatement( 기재할SQL );   , 기재된 인터페이스 반환
+            // PreparedStatement( SQL기재된 인터페이스 ) 
+            int result = ps.executeUpdate(); // ps.executeUpdate(), ( SQL기재된 인터페이스에서 SQL 실행 ), 실행한 레코드수 반환 
+            System.out.println( result ); // 1: 성공 , 0: 실패
+            System.out.println( "레코드 등록 성공");
 
 
             String sql2 = "select * from board";
