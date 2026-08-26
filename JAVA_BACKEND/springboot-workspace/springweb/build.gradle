@@ -17,10 +17,15 @@ repositories {
 	mavenCentral()
 }
 
-dependencies {
+dependencies { //의존성 {} 안에 프로젝트 내 추가할 라이브러리 코드 삽입. -> 자동으로 라이브로리 설치
+	//	1. springboot 
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	//2. jdbc
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {

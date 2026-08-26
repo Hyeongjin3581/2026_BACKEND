@@ -29,9 +29,6 @@ application / json 형식 , text / html 형식, application /x-www-form-urlencod
 HTTP에서 질문 3개 , WAS에서 질문 3개를 할 거임. 
 
 
-
-
-
 WAS는 정적 페이지와 동적 페이지로 나뉜다. 
 1. 정적페이지 :  Web Server는 파일 경로 이름을 받아 경로와 일치하는 file Contents를 반환.  * 항상 동일한 페이지를 반환한다. * (image, html, css, javascript)
 2. 동적페이지 : 인자의 내용에 맞게 동적인 Contents를 반환한다. 즉 , 웹 서버에 의해서 실행되는 프로그램을 통해 만들어진 결과물이다. 
@@ -92,6 +89,21 @@ localhost(127.0.0.1)를 통한 통신은 내부 루프백(Loopback) 네트워크
 6. 응답 생성 및 반환 (HTTP Response)
 
 
+mvc 패턴 spring에서 실습한 내용. (view는 아파치톰캣에서 자동으로 할당해주기 때문에 제거. )
+주요 어노테이션 정리.
+
+1. @SpringBootApplication  / Spring 실행할 때 spring에 필요한 기본세팅( 1.내장톰캣지원 2. 서블릿자동등록 )
+
+2. @RestController /  Spring 에서는 서블릿을 상속이 아닌 @Controller 어노테이션으로 지원( HTTP ) 
+   + RestController ( HTTP content-tpye 자동으로 application/json 세팅 )
+
+3. @PostMapping( "/board/save" ) /  만약에 HTTP 요청이 POST 이면 해당 메소드로 연결 + URL (중복없이) 만들기
+4.  @GetMapping( "/board/findall" ) / 만약에 HTTP 요청이 GET 이면 해당 메소드로 연결 + URL (중복없이) 만들기
+5. @PutMapping( "/board/update" ) /  만약에 HTTP 요청이 PUT 이면 해당 메소드로 연결 + URL (중복없이) 만들기
+6. @DeleteMapping( "/board/delete" ) /  만약에 HTTP 요청이 DELETE 이면 해당 메소드로 연결 + URL (중복없이) 만들기
+
+해당 HTTP 테스트는 Talend API 에서 진행! (각 회사마다 다름. )
+(대부분의 회사에서는 Postman에서 쓴다고 하네요.)
 
 
 
