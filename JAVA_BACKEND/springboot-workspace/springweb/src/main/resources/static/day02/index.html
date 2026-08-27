@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Page Title</title>
+<link rel='stylesheet' href='main.css'>
+</head> 
+
+<body>
+
+<!-- 스프링 서버 실행 후: http://127.0.0.1:8080/day02/index.html   http://localhost:8080/day02/index.html    -->
+<h3> 스프링(톰캣) 서버에서 실행된 HTML </h3>
+<div> <!-- 레이아웃 구역-->
+    내용 : <input type ="text"/><br/>&#x20;
+    작성자 :  <input type ="text"/><br/>
+    <button>등록</button>
+</div>
+<div>
+        <table border="1"> <!--테이블-->
+            <thead>
+                <tr>
+                    <th>번호</th><th>작성자</th><th>내용</th><th>비고</th> <!-- 제목 셀-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td><td>유재석</td><td>안녕하세요</td>
+                    <td><button>수정</button><button>삭제</button></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+
+
+</body>
+</html>
+
+<!--
+
+스프링 프로젝트내
+src -> main -> java 파일 (controller등) = 서블릿 (동적할당 / 웹 컨테이너)
+    src -> main -> java -> example -> day02 -> BoardController -> @Getmapping("/board/findall")
+    통신경로 : [http://127.0.0.1:8080/board/findall](http://127.0.0.1:8080/board/findall)
+
+-> 127.0.0.1:8080 (여기까지가 도메인.) 과거에는 따로 정적/동적 파일을 실행하였지만, 이제는 하나의 도메인에서 정적/동적 할당을 함.
+
+src -> main -> resources -> static (html/css/js등) -> 정적서버/웹서버
+    src -> main -> resources -> static -> day02 -> index.html 파일 생성
+    통신경로 : [http://127.0.0.1:8080/day02/index.html](http://127.0.0.1:8080/day02/index.html)
+
+-->
